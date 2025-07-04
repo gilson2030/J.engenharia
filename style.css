@@ -14,13 +14,54 @@ header {
     width: 120px;
     vertical-align: middle;
 }
+h1 {
+    margin: 12px 0 0 0;
+    font-size: 1.6em;
+}
+form {
+    max-width: 980px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
 section {
     background: #fff;
-    margin: 16px auto;
-    max-width: 900px;
+    margin: 18px auto;
+    max-width: 950px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+h2 {
+    margin-top: 0;
+    color: #223366;
+    font-size: 1.2em;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+.grid .full {
+    grid-column: 1 / -1;
+}
+label {
+    display: block;
+    font-size: 0.92em;
+    color: #223366;
+    margin-bottom: 2px;
+    margin-top: 12px;
+}
+input, select {
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    font-size: 1em;
+    background: #f7f8fa;
+}
+input[readonly] {
+    background: #eee;
 }
 table {
     width: 100%;
@@ -28,7 +69,7 @@ table {
     margin: 10px 0;
 }
 th, td {
-    padding: 10px;
+    padding: 10px 6px;
     border-bottom: 1px solid #eee;
     text-align: left;
 }
@@ -43,6 +84,7 @@ button {
     border-radius: 6px;
     cursor: pointer;
     margin-top: 10px;
+    transition: background 0.2s;
 }
 button:hover {
     background: #334488;
@@ -62,29 +104,27 @@ footer {
     z-index: 2;
     left: 0; top: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.25);
 }
 .modal-content {
     background: #fff;
-    margin: 10% auto;
-    padding: 30px;
+    margin: 7% auto;
+    padding: 30px 18px 22px 18px;
     border-radius: 8px;
     width: 90%;
     max-width: 400px;
     position: relative;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
 }
 .close {
     position: absolute;
-    right: 16px; top: 12px;
+    right: 18px; top: 10px;
     font-size: 28px;
     cursor: pointer;
-    color: #666;
+    color: #888;
 }
-input {
-    width: 100%;
-    margin: 8px 0;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #bbb;
+@media (max-width: 600px) {
+    section, form { padding: 7px; }
+    .modal-content { padding: 16px 6px; }
+    .grid { grid-template-columns: 1fr; gap: 6px; }
 }
