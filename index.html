@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Orçamento Mestre da Obra</title>
-    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <header>
@@ -13,60 +13,180 @@
         <h1>ORÇAMENTO <span id="orcamento-numero">008246</span></h1>
     </header>
 
-    <section class="dados-contratante">
-        <h2>Contratante</h2>
-        <p><strong>Locadora:</strong> MESTRE DA OBRA - CUIABA</p>
-        <p><strong>Endereço:</strong> AV PROFESSOR JOAO GOMES MONTEIRO SOBRINHO, 840 - AREAO, CUIABA - MT</p>
-        <p><strong>Contato:</strong> (65) 9 9905-5700 | Email: cuiaba@mestredaobracolocoes.com.br</p>
-    </section>
+    <form id="form-orcamento" autocomplete="off">
+        <!-- CONTRATANTE -->
+        <section class="dados-contratante">
+            <h2>Contratante</h2>
+            <div class="grid">
+                <div>
+                    <label>Locadora</label>
+                    <input type="text" value="MESTRE DA OBRA - CUIABA" readonly>
+                </div>
+                <div>
+                    <label>Bairro</label>
+                    <input type="text" value="AREAO" readonly>
+                </div>
+                <div>
+                    <label>Endereço</label>
+                    <input type="text" value="AV PROFESSOR JOAO GOMES MONTEIRO SOBRINHO, 840" readonly>
+                </div>
+                <div>
+                    <label>Estado</label>
+                    <input type="text" value="MT" readonly>
+                </div>
+                <div>
+                    <label>Cidade</label>
+                    <input type="text" value="CUIABA" readonly>
+                </div>
+                <div>
+                    <label>CEP</label>
+                    <input type="text" value="78010420" readonly>
+                </div>
+                <div>
+                    <label>CNPJ</label>
+                    <input type="text" value="48.730.242/0001-67" readonly>
+                </div>
+                <div>
+                    <label>Inscrição Estadual</label>
+                    <input type="text" value="139716211" readonly>
+                </div>
+                <div>
+                    <label>WhatsApp</label>
+                    <input type="text" value="(65) 9 9905-5700" readonly>
+                </div>
+                <div>
+                    <label>Telefone</label>
+                    <input type="text" value="(65) 9 9905-5700" readonly>
+                </div>
+                <div class="full">
+                    <label>Email</label>
+                    <input type="text" value="cuiaba@mestredaobracolocoes.com.br" readonly>
+                </div>
+            </div>
+        </section>
 
-    <section class="dados-cliente">
-        <h2>Locatário</h2>
-        <p><strong>Nome:</strong> <span id="cliente-nome"></span></p>
-        <p><strong>Contato:</strong> <span id="cliente-contato"></span></p>
-        <p><strong>Endereço da Obra:</strong> <span id="obra-endereco"></span></p>
-        <p><strong>Responsável:</strong> <span id="obra-responsavel"></span> | <span id="obra-telefone"></span></p>
-    </section>
+        <!-- LOCATÁRIO -->
+        <section class="dados-cliente">
+            <h2>Locatário</h2>
+            <div class="grid">
+                <div>
+                    <label>Nome</label>
+                    <input type="text" name="locatario_nome" required>
+                </div>
+                <div>
+                    <label>Bairro</label>
+                    <input type="text" name="locatario_bairro">
+                </div>
+                <div>
+                    <label>Endereço</label>
+                    <input type="text" name="locatario_endereco">
+                </div>
+                <div>
+                    <label>Estado</label>
+                    <input type="text" name="locatario_estado">
+                </div>
+                <div>
+                    <label>Cidade</label>
+                    <input type="text" name="locatario_cidade">
+                </div>
+                <div>
+                    <label>CPF</label>
+                    <input type="text" name="locatario_cpf">
+                </div>
+                <div>
+                    <label>Identidade</label>
+                    <input type="text" name="locatario_identidade">
+                </div>
+                <div>
+                    <label>Telefone</label>
+                    <input type="text" name="locatario_telefone">
+                </div>
+                <div>
+                    <label>Celular</label>
+                    <input type="text" name="locatario_celular">
+                </div>
+            </div>
+        </section>
 
-    <section class="itens">
-        <h2>Itens</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Foto</th>
-                    <th>Item</th>
-                    <th>Produto</th>
-                    <th>Qtd</th>
-                    <th>Valor Unitário</th>
-                    <th>Valor Total</th>
-                </tr>
-            </thead>
-            <tbody id="tabela-itens">
-                <!-- Itens adicionados aqui -->
-            </tbody>
-        </table>
-        <button onclick="abrirModalItem()">Adicionar Item</button>
-    </section>
+        <!-- ENDEREÇO DA OBRA -->
+        <section class="dados-obra">
+            <h2>Endereço da obra</h2>
+            <div class="grid">
+                <div>
+                    <label>Endereço</label>
+                    <input type="text" name="obra_endereco">
+                </div>
+                <div>
+                    <label>Contato</label>
+                    <input type="text" name="obra_contato">
+                </div>
+                <div>
+                    <label>Telefone</label>
+                    <input type="text" name="obra_telefone">
+                </div>
+            </div>
+        </section>
+        <!-- ITENS -->
+        <section class="itens">
+            <h2>Itens</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Item</th>
+                        <th>Produto</th>
+                        <th>Qtd</th>
+                        <th>Valor Unitário</th>
+                        <th>Valor Total</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-itens">
+                    <!-- Itens vão aparecer aqui -->
+                </tbody>
+            </table>
+            <button type="button" onclick="abrirModalItem()">Adicionar Item</button>
+        </section>
 
-    <section class="resumo">
-        <h2>Resumo</h2>
-        <p><strong>Data de Vencimento:</strong> <span id="data-vencimento"></span></p>
-        <p><strong>Forma de Pagamento:</strong> <span id="forma-pagamento"></span></p>
-        <p><strong>Valor Total:</strong> R$ <span id="valor-total">0,00</span></p>
-        <p><strong>Período de Locação:</strong> <span id="periodo-locacao"></span></p>
-    </section>
+        <!-- RESUMO -->
+        <section class="resumo">
+            <h2>Resumo</h2>
+            <div class="grid">
+                <div>
+                    <label>Data de Vencimento</label>
+                    <input type="date" name="data_vencimento" id="data-vencimento">
+                </div>
+                <div>
+                    <label>Forma de Pagamento</label>
+                    <select name="forma_pagamento" id="forma-pagamento">
+                        <option value="PIX">PIX</option>
+                        <option value="Cartão">Cartão</option>
+                        <option value="Dinheiro">Dinheiro</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Valor Total</label>
+                    <input type="text" name="valor_total" id="valor-total" readonly>
+                </div>
+                <div>
+                    <label>Período de Locação</label>
+                    <input type="text" name="periodo_locacao" id="periodo-locacao" placeholder="Ex: 04/07/2025 até 03/08/2025">
+                </div>
+            </div>
+        </section>
 
-    <!-- Modal para adicionar item -->
-    <div id="modal-item" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="fecharModalItem()">&times;</span>
-            <h2>Adicionar Item</h2>
-            <input type="text" id="item-produto" placeholder="Produto">
-            <input type="number" id="item-qtd" placeholder="Quantidade" min="1" value="1">
-            <input type="number" id="item-valor" placeholder="Valor Unitário" step="0.01">
-            <button onclick="adicionarItem()">Adicionar</button>
+        <!-- MODAL ITEM -->
+        <div id="modal-item" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="fecharModalItem()">&times;</span>
+                <h2>Adicionar Item</h2>
+                <input type="text" id="item-produto" placeholder="Produto">
+                <input type="number" id="item-qtd" placeholder="Quantidade" min="1" value="1">
+                <input type="number" id="item-valor" placeholder="Valor Unitário" step="0.01">
+                <button type="button" onclick="adicionarItem()">Adicionar</button>
+            </div>
         </div>
-    </div>
+    </form>
 
     <footer>
         <p>MESTRE DA OBRA - CUIABA</p>
