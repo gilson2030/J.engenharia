@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Orçamento Mestre da Obra</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Mestre da Obra" class="logo">
+        <h1>ORÇAMENTO <span id="orcamento-numero">008246</span></h1>
+    </header>
+
+    <section class="dados-contratante">
+        <h2>Contratante</h2>
+        <p><strong>Locadora:</strong> MESTRE DA OBRA - CUIABA</p>
+        <p><strong>Endereço:</strong> AV PROFESSOR JOAO GOMES MONTEIRO SOBRINHO, 840 - AREAO, CUIABA - MT</p>
+        <p><strong>Contato:</strong> (65) 9 9905-5700 | Email: cuiaba@mestredaobracolocoes.com.br</p>
+    </section>
+
+    <section class="dados-cliente">
+        <h2>Locatário</h2>
+        <p><strong>Nome:</strong> <span id="cliente-nome"></span></p>
+        <p><strong>Contato:</strong> <span id="cliente-contato"></span></p>
+        <p><strong>Endereço da Obra:</strong> <span id="obra-endereco"></span></p>
+        <p><strong>Responsável:</strong> <span id="obra-responsavel"></span> | <span id="obra-telefone"></span></p>
+    </section>
+
+    <section class="itens">
+        <h2>Itens</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Item</th>
+                    <th>Produto</th>
+                    <th>Qtd</th>
+                    <th>Valor Unitário</th>
+                    <th>Valor Total</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-itens">
+                <!-- Itens adicionados aqui -->
+            </tbody>
+        </table>
+        <button onclick="abrirModalItem()">Adicionar Item</button>
+    </section>
+
+    <section class="resumo">
+        <h2>Resumo</h2>
+        <p><strong>Data de Vencimento:</strong> <span id="data-vencimento"></span></p>
+        <p><strong>Forma de Pagamento:</strong> <span id="forma-pagamento"></span></p>
+        <p><strong>Valor Total:</strong> R$ <span id="valor-total">0,00</span></p>
+        <p><strong>Período de Locação:</strong> <span id="periodo-locacao"></span></p>
+    </section>
+
+    <!-- Modal para adicionar item -->
+    <div id="modal-item" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModalItem()">&times;</span>
+            <h2>Adicionar Item</h2>
+            <input type="text" id="item-produto" placeholder="Produto">
+            <input type="number" id="item-qtd" placeholder="Quantidade" min="1" value="1">
+            <input type="number" id="item-valor" placeholder="Valor Unitário" step="0.01">
+            <button onclick="adicionarItem()">Adicionar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>MESTRE DA OBRA - CUIABA</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
