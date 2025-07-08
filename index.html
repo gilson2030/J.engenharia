@@ -3,126 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Orçamento Mestre da Obra</title>
+    <title>Orçamento J. Engenharia</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Logo Mestre da Obra" class="logo">
-        <h1>ORÇAMENTO <span id="orcamento-numero">008246</span></h1>
+    <header class="topo">
+        <!-- Substitua logo.png pelo seu logo -->
+        <img src="logo.png" alt="Logo J. Engenharia" id="logo" class="logo">
     </header>
 
-    <form id="form-orcamento" autocomplete="off">
-        <!-- CONTRATANTE -->
-        <section class="dados-contratante">
+    <main>
+        <div class="orcamento-numero-box">
+            <label for="orcamento-numero">Nº do Orçamento:</label>
+            <input type="text" id="orcamento-numero" name="orcamento_numero" maxlength="15" placeholder="Digite o nº do orçamento">
+        </div>
+
+        <section class="contratante-info">
             <h2>Contratante</h2>
-            <div class="grid">
-                <div>
-                    <label>Locadora</label>
-                    <input type="text" value="MESTRE DA OBRA - CUIABA" readonly>
-                </div>
-                <div>
-                    <label>Bairro</label>
-                    <input type="text" value="AREAO" readonly>
-                </div>
-                <div>
-                    <label>Endereço</label>
-                    <input type="text" value="AV PROFESSOR JOAO GOMES MONTEIRO SOBRINHO, 840" readonly>
-                </div>
-                <div>
-                    <label>Estado</label>
-                    <input type="text" value="MT" readonly>
-                </div>
-                <div>
-                    <label>Cidade</label>
-                    <input type="text" value="CUIABA" readonly>
-                </div>
-                <div>
-                    <label>CEP</label>
-                    <input type="text" value="78010420" readonly>
-                </div>
-                <div>
-                    <label>CNPJ</label>
-                    <input type="text" value="48.730.242/0001-67" readonly>
-                </div>
-                <div>
-                    <label>Inscrição Estadual</label>
-                    <input type="text" value="139716211" readonly>
-                </div>
-                <div>
-                    <label>WhatsApp</label>
-                    <input type="text" value="(65) 9 9905-5700" readonly>
-                </div>
-                <div>
-                    <label>Telefone</label>
-                    <input type="text" value="(65) 9 9905-5700" readonly>
-                </div>
-                <div class="full">
-                    <label>Email</label>
-                    <input type="text" value="cuiaba@mestredaobracolocoes.com.br" readonly>
-                </div>
+            <div class="contratante-linhas">
+                <div><strong>Endereço:</strong> Avenida Carlos Addor de Souza, Quadra 14, Número 288</div>
+                <div><strong>Bairro:</strong> Osmar Cabral</div>
+                <div><strong>CEP:</strong> 78093-680</div>
+                <div><strong>CNPJ:</strong> 39.943.996.0001-04</div>
+                <div><strong>Inscrição estadual:</strong> 138810583</div>
+                <div><strong>WhatsApp:</strong> (65) 98406-2865</div>
+                <div><strong>Telefone:</strong> (65) 98406-2865</div>
+                <div><strong>E-mail:</strong> j.engenhariacuiaba@gmail.com</div>
             </div>
         </section>
-
         <!-- LOCATÁRIO -->
-        <section class="dados-cliente">
+        <section class="locatario-info">
             <h2>Locatário</h2>
             <div class="grid">
                 <div>
                     <label>Nome</label>
-                    <input type="text" name="locatario_nome" required>
+                    <input type="text" name="locatario_nome" autocomplete="off">
                 </div>
                 <div>
                     <label>Bairro</label>
-                    <input type="text" name="locatario_bairro">
+                    <input type="text" name="locatario_bairro" autocomplete="off">
                 </div>
                 <div>
                     <label>Endereço</label>
-                    <input type="text" name="locatario_endereco">
+                    <input type="text" name="locatario_endereco" autocomplete="off">
                 </div>
                 <div>
                     <label>Estado</label>
-                    <input type="text" name="locatario_estado">
+                    <input type="text" name="locatario_estado" maxlength="2" style="text-transform:uppercase" autocomplete="off">
                 </div>
                 <div>
                     <label>Cidade</label>
-                    <input type="text" name="locatario_cidade">
+                    <input type="text" name="locatario_cidade" autocomplete="off">
                 </div>
                 <div>
                     <label>CPF</label>
-                    <input type="text" name="locatario_cpf">
+                    <input type="text" name="locatario_cpf" autocomplete="off">
                 </div>
                 <div>
                     <label>Identidade</label>
-                    <input type="text" name="locatario_identidade">
+                    <input type="text" name="locatario_identidade" autocomplete="off">
                 </div>
                 <div>
                     <label>Telefone</label>
-                    <input type="text" name="locatario_telefone">
+                    <input type="text" name="locatario_telefone" autocomplete="off">
                 </div>
                 <div>
                     <label>Celular</label>
-                    <input type="text" name="locatario_celular">
+                    <input type="text" name="locatario_celular" autocomplete="off">
                 </div>
             </div>
         </section>
 
         <!-- ENDEREÇO DA OBRA -->
-        <section class="dados-obra">
+        <section class="obra-info">
             <h2>Endereço da obra</h2>
             <div class="grid">
                 <div>
                     <label>Endereço</label>
-                    <input type="text" name="obra_endereco">
+                    <input type="text" name="obra_endereco" autocomplete="off">
                 </div>
                 <div>
                     <label>Contato</label>
-                    <input type="text" name="obra_contato">
+                    <input type="text" name="obra_contato" autocomplete="off">
                 </div>
                 <div>
                     <label>Telefone</label>
-                    <input type="text" name="obra_telefone">
+                    <input type="text" name="obra_telefone" autocomplete="off">
+                </div>
+            </div>
+        </section>
+
+        <!-- PERÍODO DE LOCAÇÃO -->
+        <section class="periodo-info">
+            <h2>Período de Locação</h2>
+            <div class="grid">
+                <div>
+                    <label>Data de Início</label>
+                    <input type="date" name="periodo_inicio" id="periodo-inicio">
+                </div>
+                <div>
+                    <label>Data de Término</label>
+                    <input type="date" name="periodo_fim" id="periodo-fim">
                 </div>
             </div>
         </section>
@@ -168,10 +150,6 @@
                     <label>Valor Total</label>
                     <input type="text" name="valor_total" id="valor-total" readonly>
                 </div>
-                <div>
-                    <label>Período de Locação</label>
-                    <input type="text" name="periodo_locacao" id="periodo-locacao" placeholder="Ex: 04/07/2025 até 03/08/2025">
-                </div>
             </div>
         </section>
 
@@ -186,10 +164,9 @@
                 <button type="button" onclick="adicionarItem()">Adicionar</button>
             </div>
         </div>
-    </form>
-
+    </main>
     <footer>
-        <p>MESTRE DA OBRA - CUIABA</p>
+        <p>J. Engenharia</p>
     </footer>
     <script src="app.js"></script>
 </body>
