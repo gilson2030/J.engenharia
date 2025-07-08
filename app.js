@@ -47,7 +47,7 @@ function atualizarTabelaItens() {
             <td>${item.qtd}</td>
             <td>R$ ${item.valor.toFixed(2)}</td>
             <td>R$ ${(item.valor * item.qtd).toFixed(2)}</td>
-            <td><button type="button" onclick="removerItem(${i})" style="background:#c20000;">Excluir</button></td>
+            <td><button type="button" onclick="removerItem(${i})">Excluir</button></td>
         </tr>`;
         tabela.innerHTML += linha;
         total += item.valor * item.qtd;
@@ -65,21 +65,17 @@ window.onclick = function(event) {
     }
 };
 
-// Atualização automática do valor total se editar itens direto no JS
+// Bloqueia edição manual do valor total
 document.addEventListener('DOMContentLoaded', () => {
     atualizarTabelaItens();
 
-    // Ajusta valor total caso tente digitar manualmente (só para manter interface amigável)
     document.getElementById('valor-total').addEventListener('input', function(e) {
-        // Não deixa o usuário editar manualmente
+        // Só atualiza pelo JS, não permite digitação manual
         e.target.value = itens.reduce((acc, it) => acc + it.qtd * it.valor, 0).toFixed(2);
     });
+
+    // Inicia datas vazias, pode ser personalizado aqui
+    document.getElementById('data-vencimento').value = "";
+    document.getElementById('periodo-inicio').value = "";
+    document.getElementById('periodo-fim').value = "";
 });
-
-// (Opcional) Futuro: Salvar no firebase ao clicar em "Salvar Orçamento"
-// document.getElementById('form-orcamento').addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     // Coletar todos os dados do formulário e dos itens
-//     // Salvar no Firebase
-// });
-
