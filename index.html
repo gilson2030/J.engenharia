@@ -1,5 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<body>
+    <header class="topo">
+        <img src="logo.png" alt="Logo J. Engenharia" id="logo" class="logo">
+    </header>
+    <div class="faixa-azul"></div>
+    <main>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -169,5 +173,10 @@
         <p>J. Engenharia</p>
     </footer>
     <script src="app.js"></script>
+    <script>
+if (!localStorage.getItem('logado')) {
+    window.location.href = "login.html";
+}
+</script>
 </body>
 </html>
