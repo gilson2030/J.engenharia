@@ -268,3 +268,28 @@ body.login-bg {
     background: #162140;
     box-shadow: 0 4px 16px rgba(34, 51, 94, 0.12);
 }
+.btn-imprimir {
+    background: #5b6e8d;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    padding: 4px 16px;
+    font-size: 0.89rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(34, 51, 94, 0.07);
+    display: block;
+    margin: 36px 0 16px auto;  /* direita embaixo */
+}
+
+.btn-imprimir:hover,
+.btn-imprimir:focus {
+    background: #22335e;
+}
+@media (max-width:600px){
+    .btn-imprimir { font-size: 0.95em; padding: 4px 10px; margin: 26px 0 14px auto;}
+}
+@media print {
+    .btn-imprimir, .btn-adicionar-item, footer { display: none !important; }
+}
