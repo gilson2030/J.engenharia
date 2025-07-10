@@ -41,14 +41,11 @@ function atualizarTabelaItens() {
 
     itens.forEach((item, i) => {
         let linha = `<tr>
-            <td>-</td>
-            <td>${i + 1}</td>
-            <td>${item.produto}</td>
-            <td>${item.qtd}</td>
-            <td>R$ ${item.valor.toFixed(2)}</td>
-            <td>R$ ${(item.valor * item.qtd).toFixed(2)}</td>
-            <td><button type="button" onclick="removerItem(${i})">Excluir</button></td>
-        </tr>`;
+    <td>-</td>
+    <td>${i + 1}</td>
+    <td>${item.produto}</td>
+    ...
+</tr>`;
         tabela.innerHTML += linha;
         total += item.valor * item.qtd;
     });
