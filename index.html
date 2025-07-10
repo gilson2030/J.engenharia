@@ -176,7 +176,7 @@
 
     <!-- Proteção de login -->
     <script>
-    if (localStorage.getItem('logado')) {
+    if (!localStorage.getItem('logado')) {
         window.location.href = "login.html";
     }
     </script>
