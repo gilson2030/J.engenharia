@@ -8,20 +8,17 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <!-- TOPO COM LOGO -->
     <header class="topo">
+        <!-- Substitua logo.png pelo seu logo -->
         <img src="logo.png" alt="Logo J. Engenharia" id="logo" class="logo">
     </header>
-    <div class="faixa-azul"></div>
 
     <main>
-        <!-- NÚMERO DO ORÇAMENTO -->
         <div class="orcamento-numero-box">
             <label for="orcamento-numero">Nº do Orçamento:</label>
             <input type="text" id="orcamento-numero" name="orcamento_numero" maxlength="15" placeholder="Digite o nº do orçamento">
         </div>
 
-        <!-- CONTRATANTE -->
         <section class="contratante-info">
             <h2>Contratante</h2>
             <div class="contratante-linhas">
@@ -35,7 +32,6 @@
                 <div><strong>E-mail:</strong> j.engenhariacuiaba@gmail.com</div>
             </div>
         </section>
-
         <!-- LOCATÁRIO -->
         <section class="locatario-info">
             <h2>Locatário</h2>
@@ -97,7 +93,6 @@
                 </div>
             </div>
         </section>
-
         <!-- PERÍODO DE LOCAÇÃO -->
         <section class="periodo-info">
             <h2>Período de Locação</h2>
@@ -112,7 +107,6 @@
                 </div>
             </div>
         </section>
-
         <!-- ITENS -->
         <section class="itens">
             <h2>Itens</h2>
@@ -173,14 +167,6 @@
     <footer>
         <p>J. Engenharia</p>
     </footer>
-
-    <!-- Proteção de login -->
-    <script>
-if (!localStorage.getItem('logado')) {
-    window.location.href = "login.html";
-}
-</script>
-<script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
-
