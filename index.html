@@ -9,8 +9,8 @@
 </head>
 <body>
     <header class="topo">
-    <img src="logo.png" alt="Logo J. Engenharia" id="logo" class="logo">
-</header>
+        <img src="logo.png" alt="Logo J. Engenharia" id="logo" class="logo">
+    </header>
     <main>
         <div class="orcamento-numero-box">
             <label for="orcamento-numero">Nº do Orçamento:</label>
@@ -111,7 +111,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Foto</th>
+                        <!-- <th>Foto</th> REMOVIDO -->
                         <th>Item</th>
                         <th>Produto</th>
                         <th>Qtd</th>
@@ -124,7 +124,7 @@
                     <!-- Itens vão aparecer aqui -->
                 </tbody>
             </table>
-            <button type="button" class="btn-adicionar-item" onclick="abrirModalItem()">Adicionar Item</button>
+            <button type="button" class="btn-adicionar-item pequeno" onclick="abrirModalItem()">Adicionar Item</button>
         </section>
         <!-- RESUMO -->
         <section class="resumo">
@@ -165,10 +165,11 @@
         <p>J. Engenharia</p>
     </footer>
     <script src="app.js"></script>
-        <script>
-if (!localStorage.getItem('logado')) {
-    window.location.href = "login.html";
-}
-</script>
+    <script>
+        if (!localStorage.getItem('logado')) {
+            window.location.href = "login.html";
+        }
+    </script>
 </body>
 </html>
+
