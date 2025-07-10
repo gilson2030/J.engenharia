@@ -18,7 +18,7 @@ function adicionarItem() {
     const qtd = parseInt(document.getElementById('item-qtd').value);
     const valor = parseFloat(document.getElementById('item-valor').value);
 
-    if(produto && qtd > 0 && valor > 0) {
+    if (produto && qtd > 0 && valor > 0) {
         itens.push({ produto, qtd, valor });
         atualizarTabelaItens();
         fecharModalItem();
@@ -41,11 +41,13 @@ function atualizarTabelaItens() {
 
     itens.forEach((item, i) => {
         let linha = `<tr>
-    <td>-</td>
-    <td>${i + 1}</td>
-    <td>${item.produto}</td>
-    ...
-</tr>`;
+            <td>${i + 1}</td>
+            <td>${item.produto}</td>
+            <td>${item.qtd}</td>
+            <td>R$ ${item.valor.toFixed(2)}</td>
+            <td>R$ ${(item.valor * item.qtd).toFixed(2)}</td>
+            <td><button type="button" onclick="removerItem(${i})">Excluir</button></td>
+        </tr>`;
         tabela.innerHTML += linha;
         total += item.valor * item.qtd;
     });
