@@ -9,10 +9,9 @@
 </head>
 <body>
     <header class="topo">
-        <!-- Substitua logo.png pelo seu logo -->
         <img src="logo.png" alt="Logo J. Engenharia" id="logo" class="logo">
     </header>
-
+    <div class="faixa-azul"></div>
     <main>
         <div class="orcamento-numero-box">
             <label for="orcamento-numero">Nº do Orçamento:</label>
@@ -168,5 +167,10 @@
         <p>J. Engenharia</p>
     </footer>
     <script src="app.js"></script>
+        <script>
+if (!localStorage.getItem('logado')) {
+    window.location.href = "login.html";
+}
+</script>
 </body>
 </html>
