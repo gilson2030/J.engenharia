@@ -188,4 +188,65 @@ footer {
         align-items: flex-start;
     }
 }
+/* FUNDO BRANCO NO BODY */
+body {
+    background: #fff;
+    /* ... resto igual ... */
+}
+
+/* BARRA AZUL ABAIXO DO LOGO */
+.faixa-azul {
+    width: 100%;
+    height: 24px;
+    background: #1c2b49;
+    margin-bottom: 28px;
+}
+
+/* TELA DE LOGIN */
+body.login-bg {
+    background: #f8fafd;
+}
+.login-container {
+    background: #fff;
+    max-width: 350px;
+    margin: 60px auto 0 auto;
+    padding: 34px 28px 28px 28px;
+    border-radius: 12px;
+    box-shadow: 0 3px 26px rgba(40,48,92,0.12);
+    text-align: center;
+}
+.login-logo {
+    width: 130px;
+    margin-bottom: 16px;
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 15px;
+}
+#login-form input {
+    padding: 11px 12px;
+    font-size: 1.05em;
+    border-radius: 7px;
+    border: 1px solid #ccd;
+    background: #fafdff;
+}
+#login-form button {
+    background: #1c2b49;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 0;
+    font-size: 1.07em;
+    cursor: pointer;
+}
+#login-form button:hover {
+    background: #223366;
+}
+.login-erro {
+    color: #c20000;
+    margin-top: 16px;
+    font-size: 1em;
+}
 
