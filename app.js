@@ -56,6 +56,11 @@ function atualizarTabelaItens() {
     document.getElementById('valor-total').value = total.toFixed(2);
 }
 
+// Função para imprimir a tela (gera PDF se escolher essa opção na impressão)
+function imprimirOrcamento() {
+    window.print();
+}
+
 // Fecha o modal ao clicar fora do conteúdo
 window.onclick = function(event) {
     const modal = document.getElementById('modal-item');
