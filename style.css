@@ -1,35 +1,45 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background: #f5f6fa;
+    background: #fff; /* Fundo branco */
     color: #222;
 }
+
 header.topo {
-    background: #1c2b49;
+    background: #fff !important; /* Remove fundo azul do topo */
     text-align: center;
-    padding: 24px 0 16px 0;
+    padding: 32px 0 16px 0;
+    border-bottom: 1px solid #eee;
 }
-.logo {
+
+.logo, #logo {
     width: 180px;
     max-width: 95vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
+
 main {
     max-width: 980px;
     margin: 0 auto;
     padding: 0 10px 40px 10px;
 }
+
 .orcamento-numero-box {
     margin: 28px 0 22px 0;
     display: flex;
     align-items: center;
     gap: 16px;
 }
+
 .orcamento-numero-box label {
     font-size: 1.08em;
     color: #222;
     font-weight: bold;
     margin-right: 10px;
 }
+
 .orcamento-numero-box input {
     font-size: 1.1em;
     padding: 7px 12px;
@@ -46,6 +56,7 @@ section {
     padding: 28px 20px 22px 20px;
     box-shadow: 0 2px 10px rgba(44,54,89,0.07);
 }
+
 section h2 {
     margin-top: 0;
     color: #1c2b49;
@@ -68,7 +79,6 @@ section h2 {
     margin-right: 3px;
 }
 
-/* GRID DOS CAMPOS */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -79,7 +89,6 @@ section h2 {
     flex-direction: column;
 }
 
-/* Inputs grandes e com mais espaço entre campos */
 input[type="text"], input[type="date"], input[type="number"], select {
     padding: 11px 12px;
     font-size: 1.05em;
@@ -188,19 +197,9 @@ footer {
         align-items: flex-start;
     }
 }
-/* FUNDO BRANCO NO BODY */
-body {
-    background: #fff;
-    /* ... resto igual ... */
-}
 
 /* BARRA AZUL ABAIXO DO LOGO */
-.faixa-azul {
-    width: 100%;
-    height: 24px;
-    background: #1c2b49;
-    margin-bottom: 28px;
-}
+.faixa-azul { display: none !important; }
 
 /* TELA DE LOGIN */
 body.login-bg {
@@ -249,23 +248,6 @@ body.login-bg {
     margin-top: 16px;
     font-size: 1em;
 }
-/* Remove fundo azul do topo */
-header.topo {
-    background: #fff !important;
-    padding: 32px 0 16px 0;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-}
-
-#logo, .logo {
-    max-width: 220px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Se tiver ainda a faixa azul, remova */
-.faixa-azul { display: none !important; }
 
 /* Botão moderno para Adicionar Item */
 .btn-adicionar-item {
@@ -273,56 +255,16 @@ header.topo {
     color: #fff;
     border: none;
     border-radius: 22px;
-    padding: 12px 32px;
-    font-size: 1rem;
+    padding: 7px 22px;
+    font-size: 0.97rem;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s, box-shadow 0.2s;
     box-shadow: 0 2px 8px rgba(34, 51, 94, 0.08);
-    margin: 12px 0 0 0;
+    margin: 10px 0 10px 0;
     outline: none;
 }
-
 .btn-adicionar-item:hover, .btn-adicionar-item:focus {
     background: #162140;
     box-shadow: 0 4px 16px rgba(34, 51, 94, 0.12);
 }
-.btn-adicionar-item.pequeno {
-    font-size: 0.95rem;
-    padding: 7px 22px;
-    border-radius: 18px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    background: #22335e;
-    color: #fff;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    box-shadow: 0 1px 4px rgba(34, 51, 94, 0.08);
-}
-
-.btn-adicionar-item.pequeno:hover,
-.btn-adicionar-item.pequeno:focus {
-    background: #162140;
-}
-.btn-adicionar-item.pequeno {
-    font-size: 0.95rem;
-    padding: 6px 18px;
-    border-radius: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background: #22335e;
-    color: #fff;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    box-shadow: 0 1px 4px rgba(34, 51, 94, 0.08);
-}
-
-.btn-adicionar-item.pequeno:hover,
-.btn-adicionar-item.pequeno:focus {
-    background: #162140;
-}
-
