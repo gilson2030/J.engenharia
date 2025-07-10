@@ -287,4 +287,23 @@ header.topo {
     background: #162140;
     box-shadow: 0 4px 16px rgba(34, 51, 94, 0.12);
 }
+.btn-adicionar-item.pequeno {
+    font-size: 0.95rem;
+    padding: 7px 22px;
+    border-radius: 18px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    background: #22335e;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(34, 51, 94, 0.08);
+}
+
+.btn-adicionar-item.pequeno:hover,
+.btn-adicionar-item.pequeno:focus {
+    background: #162140;
+}
 
