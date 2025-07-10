@@ -249,4 +249,42 @@ body.login-bg {
     margin-top: 16px;
     font-size: 1em;
 }
+/* Remove fundo azul do topo */
+header.topo {
+    background: #fff !important;
+    padding: 32px 0 16px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+#logo, .logo {
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Se tiver ainda a faixa azul, remova */
+.faixa-azul { display: none !important; }
+
+/* Botão moderno para Adicionar Item */
+.btn-adicionar-item {
+    background: #22335e;
+    color: #fff;
+    border: none;
+    border-radius: 22px;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(34, 51, 94, 0.08);
+    margin: 12px 0 0 0;
+    outline: none;
+}
+
+.btn-adicionar-item:hover, .btn-adicionar-item:focus {
+    background: #162140;
+    box-shadow: 0 4px 16px rgba(34, 51, 94, 0.12);
+}
 
