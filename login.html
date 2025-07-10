@@ -23,9 +23,9 @@
         var usuario = document.getElementById('login-usuario').value;
         var senha = document.getElementById('login-senha').value;
         // Troque por sua lógica real de autenticação
-        if(usuario === "jj" && senha === "123") {
+        if(usuario === "admin" && senha === "1234") {
             localStorage.setItem('logado', 'true');
-            window.location.href = "./";
+            window.location.href = "index.html";
         } else {
             document.getElementById('login-erro').textContent = "Usuário ou senha inválidos!";
         }
